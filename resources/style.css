@@ -1,0 +1,332 @@
+
+/* 
+Contents:
+1. Global Styles
+2. Fixed Header
+3. Hero Section
+4. Mission
+5. Programs
+6. Staff
+7. Footer
+8. Responsive Design
+ */
+
+
+
+/* 1. Global Styles =================== */
+
+*,
+*::before,
+*::after {
+    border: 1px dotted;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+h2, 
+h3 {
+    color: rgb(24, 24, 36);
+    text-align: center;
+}
+
+h2 { 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+/* 2. Fixed Header =================== */
+
+header {
+    justify-content: space-between;
+    background-color: rgb(36, 36, 36);
+    /* background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgb(215, 171, 74) 100.2% ); */
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header img {
+    width: 40px;
+    height: auto;
+    margin: .5% 0 .5% 2%;
+}
+
+nav {
+    width: 25%;
+    align-items: stretch;
+}
+
+nav a {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: white;
+    flex: 1 0 33%;
+    padding-top: 4%;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+nav a:active {
+    background-color: rgba(139,73,255,1);
+    color: white;
+}
+
+/* 3. Hero Section  */
+
+#hero {
+    background-image: url("https://images.unsplash.com/photo-1526491109672-74740652b963?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    top: -20px;
+}
+
+#hero-title {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    clip-path: polygon(0 60%, 0% 100%, 100% 100%);
+    background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% );
+}
+
+#hero h1 {
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin-left: 2%;
+    z-index: 5;
+}
+
+#responsive-title h1 {
+    position: relative;
+    display: none;
+    background-color:rgb(24, 24, 36);
+    background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% );
+    padding: 3%;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+/* 
+#responsive-title div {
+    position: relative; 
+    margin: 0 auto;
+} */
+
+/* 4. Mission */
+
+#mission {
+    margin: 10%
+}
+
+#mission-statement {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 5% auto;
+}
+
+/* 5. Programs */
+
+#programs {
+    position: relative;
+    height: 300px;
+}
+
+#programs h2 {
+    padding: 3rem 0;
+}
+
+#programs h3 {
+    color: white;
+}
+
+.diagonal::after {
+    content: "";
+    background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% );
+    position: absolute;
+    inset: 0;
+    transform: skewY(-3deg);
+    z-index: -5;
+    height: 140%;
+}
+
+#programs .flex-container {
+    gap: 20px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.program-card {
+    flex: 0 1 25%;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    padding: 1%;
+    color: white;
+}
+
+.program-description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125rem;
+}
+
+/* 6. Staff */
+
+#staff {
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.staff-card-container {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+
+.staff-card {
+    flex: 0 1 25%;
+    text-align: center;
+    background-color: rgb(186, 186, 228);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.staff-card img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.staff-card h3, 
+h4, 
+p {
+    margin: .25rem auto;
+}
+
+/* 7. Footer */
+footer {
+    height: 10rem;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+}
+
+
+footer h3, 
+footer p {
+    padding-top: 1.5rem;
+    color: white;
+}
+
+
+/* 8. Responsive Design */
+
+@media only screen and (min-width: 1251px) {
+    h1 {
+        font-size: 6rem;
+        bottom: -20px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    h1 {
+        font-size: 4.5rem;
+        bottom: 4%;
+    }
+
+    nav {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    h1 {
+        font-size: 4.5rem;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header img {
+        display: none;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #hero-title {
+        display: none;
+    }
+    
+    #responsive-title h1 {
+        display: block;
+        z-index: 1;
+    }
+
+    #programs .flex-container {
+        flex-direction: column;
+    }
+
+    .diagonal::after {
+        height: 220%;
+    }
+
+    #staff {
+        margin-top: 25rem;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #mission-statement {
+        font-size: 1.75rem;
+    }
+
+    .program-card {
+        flex-basis: 75%;
+    }
+}
